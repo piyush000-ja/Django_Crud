@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTL</title>
+</head>
+<body>
+    <h1 align="center">django template language</h1>
+    <hr>
+
+    <h2>name :{{ name|lower }} </h2>
+    <h2>name :{{ name|upper }} </h2>
+    <h2>name :{{ name|capfirst | length }} </h2>
+    <hr>
+
+    <p>{{ message|truncatewords:10 }} </p>
+    <hr>
+
+    <h3>email :{{ email|upper | truncatechars:5 }} </h3>
+    <hr>
+
+    <h4>fees :{{ fees|default:'Something went wrong' }} </h4>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- djnago template language
+query set
+loginform -->

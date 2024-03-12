@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+      <h1 class="text-center text-danger">About page</h1>
+
+{% if cookie %}
+<h1>{{ cookie }} </h1>
+{% else %}
+<h1>cookie not set</h1>   
+{% endif %}
+
+
+
+{% endblock %}

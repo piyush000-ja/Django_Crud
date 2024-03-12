@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container " >
+        <div class="alert alert-primary">
+            <h1 class="text-center">Edit Record</h1>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="field my-3 mt-5">
+                        <label for="">Name</label>
+                        <input type="text"  id="" placeholder="enter" name="name" class="form-control" value="{{ record.Name }}">
+                    </div>
+
+                    <div class="field my-3">
+                        <label for="">course</label>
+                        <input type="text" id="" placeholder="enter" name="course"  class="form-control" value="{{ record.Course }}">
+                    </div>
+
+                    <div class="field my-3">
+                        <label for="">duration</label>
+                        <input type="text"  id="" placeholder="enter" name="duration" class="form-control" value="{{ record.Duration }}">
+                    </div>
+
+                    <div class="field my-3">
+                        <label for="">fees</label>
+                        <input type="text"id="" placeholder="enter" name="fees" class="form-control" value="{{ record.Fees }}">
+                    </div>
+
+                    <input type="submit"  value="Register" class="btn btn-outline-danger">
+                </form>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+{% endblock %}

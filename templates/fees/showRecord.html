@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="alert alert-primary">
+        <h1 class="text-center">Record</h1>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>course</th>
+                <th>Duration</th>
+                <th>fees</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.id }} </td>
+                <td>{{ record.Name }}  </td>
+                <td>{{ record.Course }} </td>
+                <td>{{ record.Duration }} </td>
+                <td>{{ record.Fees }} </td>
+                <td>
+                    <a href="{% url 'editRecord' record.id %}">Edit</a>
+                </td>
+                <td>
+                    <a href="{% url 'deleteRecord' record.id %}" class="btn btn-outline-danger">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </thead>
+    </table>
+</div>   
+{% endblock %}

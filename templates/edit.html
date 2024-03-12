@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-3">
+    <div class="alert alert-primary">
+        <h1 class="text-center">Update Record</h1>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form action="" method="POST">
+                {% csrf_token %}               <!--  yhis is for data security purpose -->
+                {{ editform.as_p }}         <!--  .as_p is for form -->
+                <input type="submit" value="register" class="btn btn-outline-danger">
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+{% endblock %}
